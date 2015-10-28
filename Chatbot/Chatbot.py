@@ -4,16 +4,20 @@ import random
 greetings = ['Hey', 'Hello', 'Hi']
 random_greeting = random.choice(greetings)
 
-yes = ['yes', 'yeah', 'sure', 'yep', 'y']
-no = ['no', 'nope', 'nah', 'n']
+questions = ['How has your day been so far?','Whats your day been like?']
+random_question = random.choice(questions)
+
+sad = ['bad', 'crap', 'shitty', 'boring', 'poor']
+mixed = ['okay', 'alright', 'so so', 'not bad']
+happy = ['brilliant', 'good', 'exciting', 'excellent']
 
 response = raw_input(random_greeting + " I'm Chatbot, " + "What is your name?")
 print(random_greeting + " " + response)
 
-response = raw_input("Would you like to know about the weather near you today?")
-if response in yes:
-        responce = raw_input("Where abouts do you live then?")
-        
-else response in no
-        responce = raw_input("Okay then, whats your favourite football team?")
+response = raw_input(random_question)
+
+while True:
+    userInput = raw_input()
+    if userInput in sad:
+        print("Sorry to hear that")
     
