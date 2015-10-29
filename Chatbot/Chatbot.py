@@ -1,5 +1,6 @@
-import random
+import random, urllib
 
+url = "http://open.live.bbc.co.uk/weather/feeds/en/2640194/3dayforecast.rss"
 
 greetings = ['Hey', 'Hello', 'Hi']
 random_greeting = random.choice(greetings)
@@ -10,8 +11,8 @@ mixed = ['okay', 'alright', 'so so', 'not bad']
 happy = ['brilliant', 'good', 'exciting', 'excellent']
 yes = ['yes', 'yeah', 'why not', 'y', 'sure', 'alright']
 no = ['no', 'nah', 'im good', 'your alright', 'nope', 'rather not']
-good = []
-bad = []
+good = ['sun', 'sunny', 'clear', 'dry']
+bad = ['rain', 'bad', 'cloudy', 'overcast', 'fog']
 
 response_name = raw_input(random_greeting + " I'm Chatbot, " + "What is your name?")
 print(random_greeting + " " + response_name)
@@ -33,5 +34,5 @@ userInput_weather = response_weather
 if userInput_weather in yes:
         print("Okay, the weather in Plymouth tomorrow is" + put weather here + " and the Tempurature will be a high of " + maxtemp + ", low of " + mintemp)
         #put in line of text to say if they should enjoy the day whilst it lasts or tell them it will get better
-
-
+if userInput_weather in no:
+        print("Oh, okay then.")
