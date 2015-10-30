@@ -19,8 +19,8 @@ mixed = ['okay', 'alright', 'so so', 'not bad']
 happy = ['brilliant', 'good', 'exciting', 'excellent']
 yes = ['yes', 'yeah', 'why not', 'y', 'sure', 'alright']
 no = ['no', 'nah', 'im good', 'your alright', 'nope', 'rather not']
-good = ['sun', 'sunny', 'clear', 'dry']
-bad = ['rain', 'bad', 'cloudy', 'overcast', 'fog']
+good = ['sun', 'sunny', 'clear', 'dry', 'good']
+bad = ['rain', 'bad', 'cloudy', 'overcast', 'fog', 'shit']
 
 filtered_words = [word for word in word_list if word not in stopwords.words('english')]
 
@@ -37,14 +37,15 @@ if userInput_question in happy:
         print("Brilliant, thats nice to hear.")
 
 response_weather = raw_input("How is the weather today?")
+userInput_weather = response_weather
+if userInput_weather in good:
+    print("Good.")
+if userInput_weather in bad:
+    print("Oh wellim sure it will improve.")
 
 response_weather = raw_input("Can I tell you about the weather near you tomorrow?")
 userInput_weather = response_weather
 if userInput_weather in yes:
     print("Okay, the weather in Plymouth on " + weather)
-        #put in line of text to say if they should enjoy the day whilst it lasts or tell them it will get better
     if userInput_weather in no:
         print("Oh, okay then.")
-        
-
-
