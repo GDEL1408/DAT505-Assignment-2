@@ -9,6 +9,8 @@ timestamp = datetime.datetime.utcnow()
 
 response = api.PostUpdate("Tweeted at " + str(timestamp))
 
-file = open("C:\Users\George\Library\")
+file = open("C:\Users\George\AppData\Local\Google\Chrome\User Data\Default\Current Session", 'r')
+currentSession = file.readline().strip()
+
 
 print("Status updated to: " + response.text)
